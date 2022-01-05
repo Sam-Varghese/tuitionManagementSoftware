@@ -1,0 +1,40 @@
+<div class="menuDiv">
+  <button mat-button [matMenuTriggerFor]="adminMenu">Admin</button>
+  <mat-menu #adminMenu="matMenu">
+      <button mat-menu-item>Analysis</button>
+      <button mat-menu-item>Records</button>
+      <button mat-menu-item>Update</button>
+      <button mat-menu-item>Delete</button>
+  </mat-menu>
+  <button mat-button [matMenuTriggerFor]="studentsMenu">Students</button>
+  <mat-menu #studentsMenu="matMenu">
+    <a routerLink="/studentRegistrationPortal" routerLinkActive="active" title = "Register new students!"
+      ><button mat-menu-item>Registration</button></a
+    >
+    <a routerLink = "/studentRecords" routerLinkActive = "active" title = "Access student records!"><button mat-menu-item>Records</button></a>
+    <button mat-menu-item>Update</button>
+    <button mat-menu-item>Delete</button>
+  </mat-menu>
+  <button mat-button [matMenuTriggerFor]="onlineClasses">Classes</button>
+  <mat-menu #onlineClasses="matMenu">
+    <button mat-menu-item>Activator</button>
+    <button mat-menu-item>Create</button>
+    <button mat-menu-item>Records</button>
+    <button mat-menu-item>Update</button>
+    <button mat-menu-item>Delete</button>
+  </mat-menu>
+  <button mat-button [matMenuTriggerFor]="finance">Finance</button>
+  <mat-menu #finance="matMenu">
+    <button mat-menu-item>Depositors</button>
+    <button mat-menu-item>Defaulters</button>
+    <button mat-menu-item>Create</button>
+    <button mat-menu-item>Update</button>
+    <button mat-menu-item>Delete</button>
+  </mat-menu>
+  <button mat-button [matMenuTriggerFor]="queries">Queries</button>
+  <mat-menu #queries="matMenu">
+    <button mat-menu-item>Bug</button>
+    <button mat-menu-item>Feature</button>
+    <button mat-menu-item>Doubt</button>
+  </mat-menu>
+</div>

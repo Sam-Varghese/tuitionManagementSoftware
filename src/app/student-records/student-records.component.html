@@ -1,0 +1,9 @@
+<div class="formDiv">
+    <mat-form-field appearance="fill">
+    <mat-label><mat-icon aria-hidden="false" aria-label="Example smile icon">account_circle</mat-icon> Student name: </mat-label>
+    <!-- <input matInput /> -->
+    <mat-select>
+      <mat-option *ngFor = "let studentName of studentNamesArray" [value] = "studentName">{{studentName}}</mat-option>
+    </mat-select>
+  </mat-form-field>
+</div>

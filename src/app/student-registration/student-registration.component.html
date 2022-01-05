@@ -1,0 +1,80 @@
+<h1 align="center">Student Registration</h1>
+
+<div class="formDiv">
+  <mat-form-field appearance="fill">
+    <mat-label
+      ><mat-icon aria-hidden="false" aria-label="Example smile icon"
+        >account_circle</mat-icon
+      >
+      Student name:
+    </mat-label>
+    <input matInput required />
+  </mat-form-field>
+  <br />
+  <mat-form-field appearance="fill">
+    <mat-label
+      ><mat-icon aria-hidden="false" aria-label="Example smile icon"
+        >class</mat-icon
+      >
+      Student class:
+    </mat-label>
+    <input matInput required />
+  </mat-form-field>
+  <br />
+  <mat-form-field appearance="fill">
+    <mat-label
+      ><mat-icon aria-hidden="false" aria-label="Example smile icon"
+        >contact_mail</mat-icon
+      >
+      Email id:
+    </mat-label>
+    <input matInput type="email" />
+  </mat-form-field>
+  <br />
+  <mat-form-field appearance="fill">
+    <mat-label
+      ><mat-icon aria-hidden="false" aria-label="Example smile icon"
+        >location_on</mat-icon
+      >
+      Address:
+    </mat-label>
+    <input matInput type="email" />
+  </mat-form-field>
+  <br />
+  <mat-form-field appearance="fill">
+    <mat-label
+      ><mat-icon aria-hidden="false" aria-label="Example smile icon"
+        >contact_phone</mat-icon
+      >
+      Contact number:
+    </mat-label>
+    <input matInput type="number" required />
+  </mat-form-field>
+  <br />
+  <mat-form-field appearance="fill">
+    <mat-label>Date of joining: </mat-label>
+    <input matInput type="date" />
+  </mat-form-field>
+  <br />
+  <mat-form-field appearance="fill">
+    <mat-label
+      ><mat-icon aria-hidden="false" aria-label="Example smile icon"
+        >attach_money</mat-icon
+      >
+      Fee deposit pattern:
+    </mat-label>
+    <mat-select>
+      <mat-option value="Monthly">Monthly</mat-option>
+      <mat-option value="Monthly">Yearly</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <br />
+  <mat-form-field appearance="fill">
+    <mat-label>Description: </mat-label>
+    <input matInput />
+  </mat-form-field>
+  <br />
+
+  <!-- <input type="submit" value="Submit" class="submitButton" /> -->
+  <button mat-button color="primary" type="submit">Submit</button>
+</div>

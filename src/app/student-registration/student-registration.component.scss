@@ -1,0 +1,19 @@
+@mixin formDiv{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 1vw;
+    margin: 2vw;
+}
+
+
+.formDiv{
+    @include formDiv();
+}
+
+.submitButton{
+    background-color: rgba(222, 231, 231, 0.5);
+    padding: 1vw;
+    color: black;
+    font-size: 1vw;
+}
