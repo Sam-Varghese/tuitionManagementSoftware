@@ -5,13 +5,19 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class StudentRecordsService {
-  constructor(private http: HttpClient) {}
+  constructor(private httpClient: HttpClient) {}
 
-  // Method to get names of all students of a given class
-  getStudentNames(className: any) {
-    let url = `http://localhost:5000/getStudentRecords/${className}`;
-    let data = this.http.get(url);
-    console.log("Got student names from getStudentRecords, sending it to appropriate component");
+  // Method to get the details of a student of a given class
+  getStudentDetails(className: string, studentName: string) {
+    // Replacing all the spaces before making a request
+    // studentName = studentName.replace(' ', '%');
+    // className = className.replace(' ', '%');
+
+    let url = `http://localhost:5000/getStudentRecords/${studentName}/${className}`;
+    let data = this.httpClient.get(url);
+    console.log(
+      `Got the details of ${studentName} in the student-records service.`
+    );
     return data;
   }
 }

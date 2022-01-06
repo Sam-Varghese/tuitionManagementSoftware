@@ -1,6 +1,6 @@
 # Application
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2 for Paul classes.
 
 ## Development server
 
@@ -25,3 +25,9 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Conventions
+
+Here are some conventions that are used in order to build the application
+
+- Spaces in the user input should be replaced by `%`. API will replace it by ` ` while returning data.

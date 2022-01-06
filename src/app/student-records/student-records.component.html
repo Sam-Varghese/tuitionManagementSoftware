@@ -1,9 +1,60 @@
 <div class="formDiv">
-    <mat-form-field appearance="fill">
-    <mat-label><mat-icon aria-hidden="false" aria-label="Example smile icon">account_circle</mat-icon> Student name: </mat-label>
-    <!-- <input matInput /> -->
-    <mat-select>
-      <mat-option *ngFor = "let studentName of studentNamesArray" [value] = "studentName">{{studentName}}</mat-option>
+  <mat-form-field appearance="fill">
+    <mat-label>
+      <mat-icon aria-hidden="false" aria-label="Example smile icon"
+        >class</mat-icon
+      >
+      Class:
+    </mat-label>
+    <mat-select (selectionChange)="findStudentNamesOfClass($event.value)">
+      <mat-option *ngFor="let classes of classNamesArray" [value]="classes">
+        {{ classes }}
+      </mat-option>
     </mat-select>
   </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label
+      ><mat-icon aria-hidden="false" aria-label="Example smile icon"
+        >account_circle</mat-icon
+      >
+      Student name:
+    </mat-label>
+    <mat-select (selectionChange)="displayStudentsCard($event.value)">
+      <mat-option
+        *ngFor="let studentName of studentNamesArray"
+        [value]="studentName"
+        >{{ studentName }}</mat-option
+      >
+    </mat-select>
+  </mat-form-field>
+  <div class="centerCard">
+    <mat-card *ngIf="showCard" class="studentsInfoCard">
+      <mat-card-header>
+        <div mat-card-avatar class="avatar"></div>
+        <mat-card-title> {{ studentDetails.name }} </mat-card-title>
+        <mat-card-subtitle>
+          Student of {{ studentDetails.school }} of class {{classSelected}}</mat-card-subtitle
+        >
+      </mat-card-header>
+      <div class="centerCard">
+        <img
+          mat-card-image
+          src="https://cdn.pixabay.com/photo/2017/01/31/18/39/boy-2026310_960_720.png"
+          alt="Student image"
+        />
+      </div>
+      <mat-card-content>
+        <ul>
+          <li>Email: <a href="mailto: {{ studentDetails.email }}">{{ studentDetails.email }}</a></li>
+          <li>Address: {{ studentDetails.address }}</li>
+          <li>Mobile no. {{ studentDetails.contactNumber }}</li>
+          <li>DOJ: {{ studentDetails.dateOfJoining }}</li>
+          <li>Description: {{ studentDetails.description }}</li>
+        </ul>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>Copy</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
 </div>
