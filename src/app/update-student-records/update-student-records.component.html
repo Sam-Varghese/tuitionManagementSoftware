@@ -1,0 +1,30 @@
+<div class="formDiv">
+  <mat-form-field appearance="fill">
+    <mat-label>
+      <mat-icon aria-hidden="false" aria-label="Example smile icon"
+        >class</mat-icon
+      >
+      Class:
+    </mat-label>
+    <mat-select (selectionChange)="findStudentNamesOfClass($event.value)">
+      <mat-option *ngFor="let classes of classNamesArray" [value]="classes">
+        {{ classes }}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label
+      ><mat-icon aria-hidden="false" aria-label="Example smile icon"
+        >account_circle</mat-icon
+      >
+      Student name:
+    </mat-label>
+    <mat-select>
+      <mat-option
+        *ngFor="let studentName of studentNamesArray"
+        [value]="studentName"
+        >{{ studentName }}</mat-option
+      >
+    </mat-select>
+  </mat-form-field>
+</div>

@@ -1,0 +1,7 @@
+@use "../student-registration/student-registration.component.scss" as
+  studentRegistrationStyles;
+
+  
+.formDiv {
+  @include studentRegistrationStyles.formDiv;
+}

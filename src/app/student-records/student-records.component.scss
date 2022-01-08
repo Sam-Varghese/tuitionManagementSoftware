@@ -1,29 +1,30 @@
-@use '../student-registration/student-registration.component.scss' as studentRegistrationStyles;
-@mixin centerContent{
-    display: flex;
-    justify-content: center;
+@use "../student-registration/student-registration.component.scss" as
+  studentRegistrationStyles;
+@mixin centerContent {
+  display: flex;
+  justify-content: center;
 }
 
-.formDiv{
-    @include studentRegistrationStyles.formDiv;
+.formDiv {
+  @include studentRegistrationStyles.formDiv;
 }
 
-.studentsInfoCard{
-    max-width: 50%;
+.studentsInfoCard {
+  max-width: 50%;
 }
 
-.mat-card-image{
-    width: 15vw;
+.mat-card-image {
+  width: 15vw;
 }
 
-.centerCard{
-    @include centerContent();
+.centerCard {
+  @include centerContent();
 }
 
-.centerProfilePhoto{
-    @include centerContent();
+.centerProfilePhoto {
+  @include centerContent();
 }
 
-.avatar{
-    background-image: url("https://randomuser.me/api/portraits/thumb/men/75.jpg");
+.avatar {
+  background-image: url("https://randomuser.me/api/portraits/thumb/men/75.jpg");
 }

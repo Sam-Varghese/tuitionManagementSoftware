@@ -16,10 +16,11 @@ import { MenuComponent } from './menu/menu.component';
 import { StudentRecordsComponent } from './student-records/student-records.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatCardModule } from '@angular/material/card';
+import { UpdateStudentRecordsComponent } from './update-student-records/update-student-records.component';
 
 
 @NgModule({
-  declarations: [AppComponent, StudentRegistrationComponent, MenuComponent, StudentRecordsComponent],
+  declarations: [AppComponent, StudentRegistrationComponent, MenuComponent, StudentRecordsComponent, UpdateStudentRecordsComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
